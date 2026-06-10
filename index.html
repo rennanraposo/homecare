@@ -1,16 +1,173 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeCare Control</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+```
+<div class="container">
+
     <h1>HomeCare Control</h1>
 
-    <script src="script.js"></script>
+    <!-- Cadastro de Cuidadoras -->
+    <section class="card">
+        <h2>Cadastro de Cuidadoras</h2>
+
+        <form id="form-cuidadora">
+
+            <div class="campo">
+                <label for="nome-cuidadora">Nome</label>
+                <input
+                    type="text"
+                    id="nome-cuidadora"
+                    name="nome-cuidadora"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone-cuidadora">Telefone</label>
+                <input
+                    type="tel"
+                    id="telefone-cuidadora"
+                    name="telefone-cuidadora"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="observacao-cuidadora">Observação</label>
+                <textarea
+                    id="observacao-cuidadora"
+                    name="observacao-cuidadora"
+                    rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn-principal">
+                Cadastrar Cuidadora
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Registro de Atendimento -->
+    <section class="card">
+        <h2>Registro de Atendimento</h2>
+
+        <form id="form-atendimento">
+
+            <div class="campo">
+                <label for="cuidadora-atendimento">Cuidadora</label>
+                <select
+                    id="cuidadora-atendimento"
+                    name="cuidadora-atendimento"
+                    required>
+                    <option value="">Selecione uma cuidadora</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="data-atendimento">Data</label>
+                <input
+                    type="date"
+                    id="data-atendimento"
+                    name="data-atendimento"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="descricao-atendimento">Descrição do Serviço</label>
+                <textarea
+                    id="descricao-atendimento"
+                    name="descricao-atendimento"
+                    rows="4"
+                    required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="valor-atendimento">Valor (R$)</label>
+                <input
+                    type="number"
+                    id="valor-atendimento"
+                    name="valor-atendimento"
+                    step="0.01"
+                    min="0"
+                    required>
+            </div>
+
+            <button type="submit" class="btn-principal">
+                Registrar Atendimento
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Filtro -->
+    <section class="card">
+        <h2>Filtro de Atendimentos</h2>
+
+        <div class="linha">
+
+            <div class="campo">
+                <label for="filtro-data">Data</label>
+                <input type="date" id="filtro-data">
+            </div>
+
+            <div class="campo">
+                <label>&nbsp;</label>
+                <button id="btn-filtrar" class="btn-principal">
+                    Filtrar
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lista de Cuidadoras -->
+    <section class="card">
+        <h2>Cuidadoras Cadastradas</h2>
+
+        <ul id="lista-cuidadoras" class="lista">
+            <!-- Preenchido pelo JavaScript -->
+        </ul>
+    </section>
+
+    <!-- Lista de Atendimentos -->
+    <section class="card">
+        <h2>Atendimentos Registrados</h2>
+
+        <ul id="lista-atendimentos" class="lista">
+            <!-- Preenchido pelo JavaScript -->
+        </ul>
+    </section>
+
+    <!-- Resumo -->
+    <section class="card resumo">
+        <h2>Resumo</h2>
+
+        <p>
+            Total de Cuidadoras:
+            <span id="total-cuidadoras">0</span>
+        </p>
+
+        <p>
+            Total de Atendimentos:
+            <span id="total-atendimentos">0</span>
+        </p>
+
+        <p>
+            Valor Total dos Atendimentos:
+            R$ <span id="valor-total">0,00</span>
+        </p>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+```
+
 </body>
 </html>
