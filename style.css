@@ -5,45 +5,46 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
-    color: #333333;
+    font-family: Arial, sans-serif;
+    background-color: #e9e3d5;
+    color: #222222;
     padding: 20px;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 850px;
+    margin: auto;
 }
 
 h1 {
     text-align: center;
-    color: #234fbd;
-    margin-bottom: 10px;
+    color: #2f4f3f;
+    margin-bottom: 8px;
 }
 
 .texto-inicial {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    color: #444444;
 }
 
 .card {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    padding: 18px;
-    margin-bottom: 18px;
+    background-color: #fffaf0;
+    border: 1px solid #b8aa8f;
+    padding: 15px;
+    margin-bottom: 16px;
 }
 
 h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
+    color: #3b5d4a;
+    margin-bottom: 12px;
+    font-size: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .campo {
@@ -52,25 +53,17 @@ form {
 }
 
 label {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-weight: bold;
 }
 
 input,
 select,
 textarea {
-    width: 100%;
-    padding: 9px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #999999;
     font-size: 14px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #3498db;
+    background-color: #ffffff;
 }
 
 textarea {
@@ -78,17 +71,16 @@ textarea {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #3b5d4a;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 11px;
+    padding: 10px;
     font-size: 15px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #2f473a;
 }
 
 .linha {
@@ -106,38 +98,58 @@ button:hover {
 }
 
 .lista li {
-    background-color: #fafafa;
-    border: 1px solid #dddddd;
-    border-left: 4px solid #3498db;
-    border-radius: 5px;
-    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #c5b89d;
+    padding: 10px;
     margin-bottom: 10px;
 }
 
 .resumo {
-    background-color: #eef6fc;
+    background-color: #ddd4bf;
 }
 
 .resumo p {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .resumo span {
     font-weight: bold;
-    color: #1f3c88;
+}
+
+.lista button {
+    background-color: #8b3a2f;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.lista button:hover {
+    background-color: #6f2d25;
 }
 
 @media (max-width: 700px) {
     body {
-        padding: 12px;
+        padding: 10px;
     }
 
     .linha {
         flex-direction: column;
         align-items: stretch;
     }
+}
 
-    h1 {
-        font-size: 26px;
+.botoes-relatorio {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botoes-relatorio button {
+    flex: 1;
+}
+
+@media (max-width: 700px) {
+    .botoes-relatorio {
+        flex-direction: column;
     }
 }

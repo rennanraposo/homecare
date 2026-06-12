@@ -72,8 +72,13 @@
 
             <div class="linha">
                 <div class="campo">
-                    <label for="filtro-data">Escolha uma data</label>
-                    <input type="date" id="filtro-data">
+                    <label for="filtro-data-inicial">Escolha uma data inicial</label>
+                    <input type="date" id="filtro-data-inicial">
+                </div>
+
+                <div class="campo">
+                    <label for="filtro-data-final">Escolha uma data final</label>
+                    <input type="date" id="filtro-data-final">
                 </div>
 
                 <button type="button" id="botao-filtrar">Filtrar</button>
@@ -98,6 +103,19 @@
             <p>Total de atendimentos: <span id="total-atendimentos">0</span></p>
             <p>Valor total dos atendimentos: R$ <span id="valor-total">0,00</span></p>
         </section>
+        
+        <section class="card">
+            <h2>Relatório</h2>
+
+            <p>Use o botão abaixo para gerar um relatório simples dos atendimentos em PDF.</p>
+
+            <div class="botoes-relatorio">
+                <button type="button" id="botao-imprimir-relatorio">
+                    Imprimir relatório / PDF
+                </button>
+            </div>
+        </section>
+
     </main>
 
     <script src="script.js"></script>
